@@ -27,7 +27,7 @@
   <section class="hero" id="hero">
     <div class="hero-content fade-in">
       <h1>Welcome! We Are Drichest Global</h1>
-      <p>Always the best services.</p>
+      <p>Always the best services</p>
       <button class="btn">Get Started</button>
     </div>
   </section>
@@ -145,6 +145,31 @@
       </form>
     </div>
   </section>
+
+  <section id="contact" class="contact fade-in">
+    <div class="container">
+      <h2>Contact Us via Email</h2>
+    <form id="contact-form">
+  <input type="text" placeholder="Your Name" name="name" required>
+  <input type="email" placeholder="Your Email" name="email" required>
+  <textarea aria-placeholder="Your Message" rows="5" name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+    </div>
+    </section>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+emailjs.init("pMwEjog6VSJvILBNP");
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  emailjs.sendForm("service_b4c2ji1", "template_88uwu86", this)
+    .then(() => alert("Email sent!"))
+    .catch(() => alert("Failed to send"));
+});
+</script>
+  
 
   <!-- Footer -->
   <footer>
