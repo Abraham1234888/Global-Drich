@@ -312,3 +312,7 @@ html {
     color: #fff;
   }
 }
+#contact{
+  display: block;
+  text-align: center;
+}
